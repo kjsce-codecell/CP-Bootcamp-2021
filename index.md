@@ -8,4 +8,4 @@ Resources for topics taught in CP-BootCamp 2021
 
 ---
 
-<p align="center"> Built by folks at KJSCE CODECELL with :heart: </p>
+<p align="center"> Built by folks at KJSCE CODECELL with love </p>
