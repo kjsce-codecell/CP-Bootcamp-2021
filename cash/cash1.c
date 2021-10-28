@@ -46,7 +46,7 @@ int getValue(void)
     {
         printf("Enter an integer: ");
         scanf("%i", &change);
-    } while (change < 0.00);
+    } while (change < 0);
 
     return change;
 }
