@@ -1,4 +1,4 @@
-## competitive Programming Bootcamp 2021
+## Competitive Programming Bootcamp 2021
 
 ---
 
