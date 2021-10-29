@@ -14,7 +14,7 @@ Lets first try and print a horizontal row of question marks to the screen, somet
 
 #### One approach might be
 
-```C
+```c
 #include <stdio.h>
 
 int main(void)
@@ -34,7 +34,7 @@ But first lets figure out a way to get inputfrom the user.
 
 #### Getting Input From User
 
-```C
+```c
 #include <stdio.h>
 
 int main(void)
@@ -61,7 +61,7 @@ int main(void)
 
 Now lets take input from the user and print that number of question marks to the terminal.
 
-```C
+```c
 #include <stdio.h>
 
 int main(void)
@@ -87,7 +87,7 @@ Now that we have succesfully printed a horizontal column to the terminal lets tr
 
 ![mario question marks](./assets/mario1.png)
 
-```C
+```c
 #include <stdio.h>
 
 int main(void)
@@ -114,7 +114,7 @@ Here we just make a slight modification and print `\n` after each iteration
 
 ![mario question marks](./assets/mario2.png)
 
-```C
+```c
 #include <stdio.h>
 
 int main(void)
@@ -133,7 +133,7 @@ int main(void)
 
 ### Solving the problem
 
-```C
+```c
 #include <stdio.h>
 #include <cs50.h>
 
