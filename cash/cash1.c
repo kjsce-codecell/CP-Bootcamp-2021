@@ -14,35 +14,35 @@ int main(void)
 }
 
 // Counts the least number of coins needed to cover change
-int coins(int rupees)
+int coins(int change)
 {
-    int count = 0;
+    int coins = 0;
     
     // Loops decreasing rupees by the biggest coin possible until rupees = 0
-    while (rupees > 0)
+    while (change > 0)
     {
-        if (rupees >= 20)
+        if (change >= 20)
         {
-            rupees -= 20;
-            count++;
+            change -= 20;
+            coins++;
         }
-        else if (rupees >= 10)
+        else if (change >= 10)
         {
-            rupees -= 10;
-            count++;
+            change -= 10;
+            coins++;
         }
-        else if (rupees >= 5)
+        else if (change >= 5)
         {
-            rupees -= 5;
-            count++;
+            change -= 5;
+            coins++;
         }
-        else if (rupees >= 1)
+        else if (change >= 1)
         {
-            rupees -= 1;
-            count++;
+            change -= 1;
+            coins++;
         }
     }
-    return count;
+    return coins;
 }    
 
 // Prompts user for a valid change value
