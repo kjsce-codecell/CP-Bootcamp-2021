@@ -8,34 +8,42 @@ int main(void)
 {
     // Make sure the user prompts a valid value
     int owed = getValue();
-
-    // Prints how many coins are needed, breaks line
+    
+    // Prints how many coins/notes are needed
     printf("%d\n", coins(owed));
 }
 
-// Counts the least number of coins/notes needed to cover change
+// Counts the least number of coins needed to cover change
 int coins(int rupees)
 {
     int count = 0;
-
-    int mark[6] = {100, 50, 20, 10, 5, 1};
-
-    // Loops decreasing rupees by the biggest coin/note possible until rupees = 0
+    
+    // Loops decreasing rupees by the biggest coin possible until rupees = 0
     while (rupees > 0)
     {
-        for (int i = 0; i < 6; i++)
+        if (rupees >= 20)
         {
-            if (rupees >= mark[i])
-            {
-                rupees -= mark[i];
-                count++;
-                break;
-            }
+            rupees -= 20;
+            count++;
+        }
+        else if (rupees >= 10)
+        {
+            rupees -= 10;
+            count++;
+        }
+        else if (rupees >= 5)
+        {
+            rupees -= 5;
+            count++;
+        }
+        else if (rupees >= 1)
+        {
+            rupees -= 1;
+            count++;
         }
     }
-
     return count;
-}
+}    
 
 // Prompts user for a valid change value
 int getValue(void)
@@ -46,7 +54,8 @@ int getValue(void)
     {
         printf("Enter an integer: ");
         scanf("%i", &change);
-    } while (change < 0);
+    }
+    while (change < 0.00);
 
     return change;
 }

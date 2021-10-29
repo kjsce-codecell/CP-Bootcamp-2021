@@ -1,24 +1,52 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <math.h>
+
+int getValue(void);
+int coins(int rupees);
 
 int main(void)
 {
-    // get input from user
-    int cash;
-    printf("Enter the amount of cash you have: ");
-    scanf("%d", &cash);
+    // Make sure the user prompts a valid value
+    int owed = getValue();
 
-    // calculate the number of $20 bills
-    int twenty = cash / 20;
-    // calculate the number of $10 bills
-    int ten = (cash % 20) / 10;
-    // calculate the number of $5 bills
-    int five = ((cash % 20) % 10) / 5;
-    // calculate the number of $1 bills
-    int one = (((cash % 20) % 10) % 5) / 1;
+    // Prints how many coins are needed, breaks line
+    printf("%d\n", coins(owed));
+}
 
-    // calculate sum of bills
-    int sum = twenty * 20 + ten * 10 + five * 5 + one * 1;
+// Counts the least number of coins/notes needed to cover change
+int coins(int rupees)
+{
+    int count = 0;
 
-    // print the results
-    printf("You have %d $20 bills, %d $10 bills, %d $5 bills, and %d $1 bills.\n", twenty, ten, five, one);
+    int mark[6] = {100, 50, 20, 10, 5, 1};
+
+    // Loops decreasing rupees by the biggest coin/note possible until rupees = 0
+    while (rupees > 0)
+    {
+        for (int i = 0; i < 6; i++)
+        {
+            if (rupees >= mark[i])
+            {
+                rupees -= mark[i];
+                count++;
+                break;
+            }
+        }
+    }
+
+    return count;
+}
+
+// Prompts user for a valid change value
+int getValue(void)
+{
+    // Change is initialized before the loop otherwise while won't get it
+    int change;
+    do
+    {
+        printf("Enter an integer: ");
+        scanf("%i", &change);
+    } while (change < 0);
+
+    return change;
 }

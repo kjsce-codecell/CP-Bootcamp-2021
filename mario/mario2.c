@@ -10,10 +10,10 @@ int main(void)
     } while (size < 0 );
 
     // For each row
-    for (int i = 0; i < size; i++)
+    for (int row = 0; row < size; row++)
     {
         // For each column
-        for (int j = 0; j < size; j++)
+        for (int col = 0; col < size; col++)
         {
             // Print a brick
             printf("#");
