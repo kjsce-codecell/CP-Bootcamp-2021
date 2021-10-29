@@ -1,24 +1,35 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <math.h>
+
+int getValue(void);
+int coins(int rupees);
 
 int main(void)
 {
-    // get input from user
-    int cash;
-    printf("Enter the amount of cash you have: ");
-    scanf("%d", &cash);
+    int change;
+    do
+    {
+        printf("change owed: ");
+        scanf("%i", &change);
+    }
+    while (change < 0);
 
-    // calculate the number of $20 bills
-    int twenty = cash / 20;
-    // calculate the number of $10 bills
-    int ten = (cash % 20) / 10;
-    // calculate the number of $5 bills
-    int five = ((cash % 20) % 10) / 5;
-    // calculate the number of $1 bills
-    int one = (((cash % 20) % 10) % 5) / 1;
+    int coins = 0;
 
-    // calculate sum of bills
-    int sum = twenty * 20 + ten * 10 + five * 5 + one * 1;
+    int availableCoins[] = {20, 10, 5, 1};
+    // Loops decreasing rupees by the biggest coin/note possible until rupees = 0
+    while (change > 0)
+    {
+        for (int i = 0; i < 6; i++)
+        {
+            if (change >= availableCoins[i])
+            {
+                change -= availableCoins[i];
+                coins++;
+                break;
+            }
+        }
+    }
 
-    // print the results
-    printf("You have %d $20 bills, %d $10 bills, %d $5 bills, and %d $1 bills.\n", twenty, ten, five, one);
+    printf("%i\n", coins);
 }
