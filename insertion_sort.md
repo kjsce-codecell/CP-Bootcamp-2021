@@ -58,9 +58,9 @@ int main()
 ```
 
 ### Time complexity
-Worst Case: O(n<sup>2</sup>)
-Best Case: Ω(n)
-Average Case: θ(n<sup>2</sup>)
+- Worst Case: O(n<sup>2</sup>)
+- Best Case: Ω(n)
+- Average Case: θ(n<sup>2</sup>)
 
 ### Additional Resources
 
