@@ -35,7 +35,7 @@ int main()
         current = number[i];
         position = i;
 
-        // transverse back the left array until the right position is found
+        // transverse back the left array until the correct position is found
         for (j = i - 1; j >= 0; j--)
         {
             if (number[j] > current)
