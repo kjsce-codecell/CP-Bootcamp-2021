@@ -19,7 +19,7 @@ int main()
 {
     int count, temp, i, j, number[100];
     printf("Num of elements: ");
-    scanf("%d", &count);
+    scanf("%d", &count);****
 
     printf("Enter %d numbers: ", count);
     printf("\n");
