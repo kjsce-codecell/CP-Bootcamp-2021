@@ -56,4 +56,4 @@ The last occurrence of element 5 is located at index 3
 
 - [GFG Article](https://www.geeksforgeeks.org/binary-search/)
 - [Practice problems based on binary search](https://www.hackerearth.com/practice/algorithms/searching/binary-search/practice-problems/)
-- [Visiulaization of the algorithm](https://www.cs.usfca.edu/~galles/visualization/Search.html)
+- [Visualization of the algorithm](https://www.cs.usfca.edu/~galles/visualization/Search.html)

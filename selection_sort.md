@@ -63,4 +63,4 @@ int main()
 ### Additional Resources
 
 - [GFG Article](https://www.geeksforgeeks.org/selection-sort/)
-- [Visiulaization of the algorithm](https://visualgo.net/en/sorting)
+- [Visualization of the algorithm](https://visualgo.net/en/sorting)
