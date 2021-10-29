@@ -33,3 +33,7 @@ Practice DSA and then head on to attempt the questions on CP platforms<br>
 <b>Platforms:</b><br>
 HackerRank , CodeChef , Codeforces , LeetCode
 
+That's it for the introduction, now let's dive into some concepts!
+- [Next](./binary_search.md)
+
+
