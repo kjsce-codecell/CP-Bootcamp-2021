@@ -20,7 +20,7 @@ int main(void)
     // Loops decreasing rupees by the biggest coin/note possible until rupees = 0
     while (change > 0)
     {
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 4; i++)
         {
             if (change >= availableCoins[i])
             {
