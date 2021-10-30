@@ -17,7 +17,7 @@ It improves on the performance of bubble sort by making only one swap for every 
 int main()
 {
 
-    int count, temp, i, j, number[100], max_position, swap;
+    int count, temp, i, j, number[100], position, swap;
 
     printf("Num of elements: ");
     scanf("%d", &count);
@@ -31,18 +31,18 @@ int main()
     // Selection Sort algorithm
     for (i = 0; i < (count - 1); i++)
     {
-        max_position = i;
+        position = i;
         for (j = i + 1; j < count; j++)
         {
             // updating the index of the largest number
-            if (number[max_position] > number[j])
-                max_position = j;
+            if (number[position] > number[j])
+                position = j;
         }
-        if (max_position != i)
+        if (position != i)
         {
             swap = number[i];
-            number[i] = number[max_position];
-            number[max_position] = swap;
+            number[i] = number[position];
+            number[position] = swap;
         }
     }
     printf("Sorted numbers are: ");
@@ -63,4 +63,4 @@ int main()
 ### Additional Resources
 
 - [GFG Article](https://www.geeksforgeeks.org/selection-sort/)
-- [Visiulaization of the algorithm](https://visualgo.net/en/sorting)
+- [Visualization of the algorithm](https://visualgo.net/en/sorting)
